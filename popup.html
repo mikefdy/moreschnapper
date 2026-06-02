@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>MoreSchnapper</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img class="logo" src="assets/logo.png" alt="MoreSchnapper" />
+      <div>
+        <h1>MoreSchnapper</h1>
+        <p class="tagline">Sei schneller als der Rest.</p>
+      </div>
+    </div>
+    <div id="status-pill" class="pill idle">Bereit</div>
+  </header>
+
+  <main>
+    <section class="countdown-card">
+      <span class="label">Drop in</span>
+      <div id="countdown" class="countdown">—</div>
+    </section>
+
+    <section class="catalog">
+      <div class="section-head">
+        <h2>Produkte</h2>
+        <span id="catalogMeta" class="meta">—</span>
+      </div>
+      <select id="productPicker" class="product-picker">
+        <option value="">+ Produkt hinzufügen…</option>
+      </select>
+      <ul id="selectedItems" class="selected-items"></ul>
+    </section>
+
+    <section class="schedule">
+      <h2>Drop-Zeit</h2>
+      <div class="time-row">
+        <input type="datetime-local" id="dropTime" required />
+        <button type="button" id="presetNow" class="chip">Jetzt</button>
+        <button type="button" id="presetSunday11" class="chip">So 11:00</button>
+      </div>
+
+      <div class="config-row">
+        <label class="small">
+          Max. Versuche
+          <input type="number" id="maxAttempts" min="1" max="50" value="10" />
+        </label>
+        <label class="small checkbox">
+          <input type="checkbox" id="autoCheckout" checked />
+          Zum Checkout
+        </label>
+        <label class="small checkbox">
+          <input type="checkbox" id="soundEnabled" checked />
+          🔊 Sound
+        </label>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button type="button" id="armBtn" class="primary">⚡ Sniper scharfschalten</button>
+      <button type="button" id="cancelBtn" class="danger" hidden>Abbrechen</button>
+    </div>
+
+    <section id="log-section">
+      <div class="section-head">
+        <h2>Log</h2>
+        <button type="button" id="clearLog" class="ghost-icon">leeren</button>
+      </div>
+      <ul id="log"></ul>
+    </section>
+  </main>
+
+  <template id="item-template">
+    <li class="selected-item">
+      <div class="item-info">
+        <span class="item-name"></span>
+        <span class="item-size"></span>
+      </div>
+      <div class="qty">
+        <button type="button" class="qty-btn minus">−</button>
+        <input type="number" class="item-qty" min="1" max="10" value="1" />
+        <button type="button" class="qty-btn plus">+</button>
+      </div>
+      <button type="button" class="item-remove" title="Entfernen">×</button>
+    </li>
+  </template>
+
+  <script src="popup.js"></script>
+</body>
+</html>

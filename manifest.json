@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "MoreSchnapper",
+  "version": "0.1.0",
+  "description": "Schnapp dir die neuesten More Nutrition Drops in Sekunden — automatischer Bestell-Sniper für morenutrition.de.",
+  "permissions": ["storage", "alarms", "tabs", "scripting", "notifications", "offscreen"],
+  "host_permissions": [
+    "https://morenutrition.de/*",
+    "https://*.morenutrition.de/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "MoreSchnapper",
+    "default_icon": {
+      "16": "assets/logo.png",
+      "48": "assets/logo.png",
+      "128": "assets/logo.png"
+    }
+  },
+  "web_accessible_resources": [
+    { "resources": ["catalog.json"], "matches": ["<all_urls>"] }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://morenutrition.de/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "assets/logo.png",
+    "48": "assets/logo.png",
+    "128": "assets/logo.png"
+  }
+}

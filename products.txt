@@ -1,0 +1,17 @@
+# Eine Handle (oder volle URL) pro Zeile.
+# Zeilen mit # werden ignoriert. Leerzeilen ebenfalls.
+# Beispiele:
+#   protein-iced-coffee
+#   https://morenutrition.de/products/protein-pudding
+
+more-protein-milkshake
+more-protein-iced-matcha-latte
+protein-iced-coffee
+protein-pudding
+more-saucen-back-protein
+more-clear-protein
+more-vegan-protein
+more-protein-milkyccino
+more-protein-iced-chai-latte
+chunky-flavour
+

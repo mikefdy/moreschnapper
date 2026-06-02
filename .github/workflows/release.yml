@@ -1,0 +1,84 @@
+name: Release
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "manifest.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Read version
+        id: ver
+        run: |
+          VERSION=$(node -p "require('./manifest.json').version")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=v$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Check if version changed
+        id: changed
+        run: |
+          if git show HEAD~1:manifest.json > /tmp/prev.json 2>/dev/null; then
+            PREV=$(node -p "require('/tmp/prev.json').version" 2>/dev/null || echo "")
+          else
+            PREV=""
+          fi
+          CURR="${{ steps.ver.outputs.version }}"
+          echo "Previous: $PREV"
+          echo "Current:  $CURR"
+          if [ "$PREV" != "$CURR" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check if tag exists
+        if: steps.changed.outputs.changed == 'true'
+        id: tag_exists
+        run: |
+          if git rev-parse "${{ steps.ver.outputs.tag }}" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build extension zip
+        if: steps.changed.outputs.changed == 'true' && steps.tag_exists.outputs.exists == 'false'
+        run: |
+          ZIP="moreschnapper-${{ steps.ver.outputs.version }}.zip"
+          zip -r "$ZIP" . \
+            -x "*.git*" \
+            -x ".github/*" \
+            -x "tools/*" \
+            -x "products.txt" \
+            -x "README.md" \
+            -x "LICENSE" \
+            -x "node_modules/*" \
+            -x "*.zip"
+          ls -la "$ZIP"
+
+      - name: Create Release
+        if: steps.changed.outputs.changed == 'true' && steps.tag_exists.outputs.exists == 'false'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.ver.outputs.tag }}
+          name: MoreSchnapper ${{ steps.ver.outputs.tag }}
+          generate_release_notes: true
+          files: moreschnapper-${{ steps.ver.outputs.version }}.zip
+          body: |
+            **Installation:**
+            1. ZIP herunterladen und entpacken
+            2. `chrome://extensions` öffnen, Entwicklermodus an
+            3. "Entpackte Erweiterung laden" → entpackten Ordner wählen
+
+            Siehe [README](../blob/main/README.md) für Details.

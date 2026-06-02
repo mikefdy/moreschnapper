@@ -1,0 +1,72 @@
+name: Update Catalog
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "products.txt"
+      - "tools/update-catalog.mjs"
+  workflow_dispatch:
+    inputs:
+      extra_products:
+        description: "Zusätzliche Handles/URLs (eine pro Zeile, optional — products.txt wird immer gelesen)"
+        required: false
+        type: string
+  schedule:
+    # Sonntag 08:00 UTC = 10:00 Berliner Zeit — refresht alles vor dem 11-Uhr-Drop
+    - cron: "0 8 * * 0"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run catalog updater
+        run: |
+          ARGS=()
+          # products.txt wird automatisch eingelesen.
+          # Bei Cron zusätzlich --refresh für alle existierenden Einträge.
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            ARGS+=("--refresh")
+          fi
+
+          if [ -n "${{ inputs.extra_products }}" ]; then
+            printf '%s' "${{ inputs.extra_products }}" | node tools/update-catalog.mjs --stdin "${ARGS[@]}"
+          else
+            node tools/update-catalog.mjs "${ARGS[@]}"
+          fi
+
+      - name: Detect changes
+        id: diff
+        run: |
+          if git diff --quiet catalog.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create Pull Request
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore(catalog): refresh from products.txt"
+          title: "Catalog Update — ${{ github.event_name }}"
+          body: |
+            Auto-update der `catalog.json` basierend auf `products.txt`.
+
+            **Trigger:** `${{ github.event_name }}`
+            **Run:** [#${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+
+            Bitte Diff prüfen und mergen.
+          branch: catalog/auto-update-${{ github.run_id }}
+          delete-branch: true
+          labels: catalog, automation
