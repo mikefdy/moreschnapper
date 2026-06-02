@@ -14,4 +14,5 @@ more-vegan-protein
 more-protein-milkyccino
 more-protein-iced-chai-latte
 chunky-flavour
+more-protein-dessert
 
