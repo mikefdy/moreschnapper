@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "MoreSchnapper",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Schnapp dir More Nutrition Drops in Sekunden automatisch in deinem Warenkorb für morenutrition.de.",
   "permissions": ["storage", "alarms", "tabs", "scripting", "notifications", "offscreen"],
   "host_permissions": [
