@@ -288,6 +288,20 @@
       ]
     },
     {
+      "id": "more-protein-dessert",
+      "name": "More Protein Dessert",
+      "variants": [
+        {
+          "size": "Brownie Style / 75g Probe",
+          "url": "https://morenutrition.de/products/more-protein-dessert?variant=51137613201680"
+        },
+        {
+          "size": "Brownie Style / 600g",
+          "url": "https://morenutrition.de/products/more-protein-dessert?variant=51137613168912"
+        }
+      ]
+    },
+    {
       "id": "more-protein-iced-chai-latte",
       "name": "More Protein Iced Chai Latte",
       "variants": [
