@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02",
+  "updated": "2026-06-07",
   "products": [
     {
       "id": "chunky-flavour",
@@ -284,6 +284,10 @@
         {
           "size": "Milkshake Style Vanilla Chocolate Chip Cookie / 25g Probe",
           "url": "https://morenutrition.de/products/more-protein-milkshake?variant=51137528135952"
+        },
+        {
+          "size": "Milkshake Style Cinnalicious / 600g",
+          "url": "https://morenutrition.de/products/more-protein-milkshake?variant=51137617592592"
         }
       ]
     },
@@ -404,6 +408,10 @@
         {
           "size": "White Almond Coconut / 25g Probe",
           "url": "https://morenutrition.de/products/more-protein-milkyccino?variant=51137530822928"
+        },
+        {
+          "size": "Strawberry Raspberry Swirl / 500g",
+          "url": "https://morenutrition.de/products/more-protein-milkyccino?variant=51137610973456"
         }
       ]
     },
@@ -430,6 +438,10 @@
         {
           "size": "Sahne / 50g Probe",
           "url": "https://morenutrition.de/products/more-saucen-back-protein?variant=51094758228132"
+        },
+        {
+          "size": "Sahne (Pink Design) / 600g",
+          "url": "https://morenutrition.de/products/more-saucen-back-protein?variant=51137616249104"
         }
       ]
     },
@@ -468,6 +480,10 @@
         {
           "size": "Fine Milk Chocolate / 600g Dose",
           "url": "https://morenutrition.de/products/more-vegan-protein?variant=51094742302884"
+        },
+        {
+          "size": "Cinnalicious / 600g Dose",
+          "url": "https://morenutrition.de/products/more-vegan-protein?variant=51137616675088"
         }
       ]
     },
@@ -582,6 +598,14 @@
         {
           "size": "Hazelnut Crispy Cream / 25g Probe",
           "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51110281314468"
+        },
+        {
+          "size": "Crème Brûlée / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51094770385060"
+        },
+        {
+          "size": "White Chocolate Crunchy Almond / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137612808464"
         }
       ]
     },
