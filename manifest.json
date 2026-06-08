@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "MoreSchnapper",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Schnapp dir More Nutrition Drops in Sekunden automatisch in deinem Warenkorb für morenutrition.de.",
   "permissions": ["storage", "alarms", "tabs", "scripting", "notifications", "offscreen"],
   "host_permissions": [
@@ -16,9 +16,9 @@
     "default_popup": "popup.html",
     "default_title": "MoreSchnapper",
     "default_icon": {
-      "16": "assets/logo.png",
-      "48": "assets/logo.png",
-      "128": "assets/logo.png"
+      "16": "assets/logo-16.png",
+      "48": "assets/logo-48.png",
+      "128": "assets/logo-128.png"
     }
   },
   "web_accessible_resources": [
@@ -32,8 +32,8 @@
     }
   ],
   "icons": {
-    "16": "assets/logo.png",
-    "48": "assets/logo.png",
-    "128": "assets/logo.png"
+    "16": "assets/logo-16.png",
+    "48": "assets/logo-48.png",
+    "128": "assets/logo-128.png"
   }
 }
