@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02",
+  "updated": "2026-10-11",
   "products": [
     {
       "id": "chunky-flavour",
@@ -124,6 +124,26 @@
         {
           "size": "Lemon Ice Cream Cake / 30g Probe",
           "url": "https://morenutrition.de/products/chunky-flavour?variant=51137604813072"
+        },
+        {
+          "size": "Hazelnut & Milky Cream / 150g",
+          "url": "https://morenutrition.de/products/chunky-flavour?variant=51103759302820"
+        },
+        {
+          "size": "Vanilla Chocolate Balls / 150g",
+          "url": "https://morenutrition.de/products/chunky-flavour?variant=51137544782096"
+        },
+        {
+          "size": "Vanilla Chocolate Balls / 30g Probe",
+          "url": "https://morenutrition.de/products/chunky-flavour?variant=51137638629648"
+        },
+        {
+          "size": "Raspberry Panna Cotta / 150g",
+          "url": "https://morenutrition.de/products/chunky-flavour?variant=51137526595856"
+        },
+        {
+          "size": "Banana Perfection / 150g",
+          "url": "https://morenutrition.de/products/chunky-flavour?variant=51137623130384"
         }
       ]
     },
@@ -210,6 +230,22 @@
         {
           "size": "Iced Tea Style Peach Passionfruit / 30g Probe",
           "url": "https://morenutrition.de/products/more-clear-protein?variant=51094757834916"
+        },
+        {
+          "size": "Lemonade Style Pink Grapefruit / 600g",
+          "url": "https://morenutrition.de/products/more-clear-protein?variant=51137622737168"
+        },
+        {
+          "size": "Lemonade Style Strawberry Lime / 600g",
+          "url": "https://morenutrition.de/products/more-clear-protein?variant=51137544585488"
+        },
+        {
+          "size": "Lemonade Style Pink Peach Rings / 600g",
+          "url": "https://morenutrition.de/products/more-clear-protein?variant=51137616281872"
+        },
+        {
+          "size": "Lemonade Style Summer Lemon / 600g",
+          "url": "https://morenutrition.de/products/more-clear-protein?variant=51104394641572"
         }
       ]
     },
@@ -284,6 +320,18 @@
         {
           "size": "Milkshake Style Vanilla Chocolate Chip Cookie / 25g Probe",
           "url": "https://morenutrition.de/products/more-protein-milkshake?variant=51137528135952"
+        },
+        {
+          "size": "Milkshake Style Maracuja Vanille / 600g",
+          "url": "https://morenutrition.de/products/more-protein-milkshake?variant=51137622769936"
+        },
+        {
+          "size": "Milkshake Style Cinnalicious / 600g",
+          "url": "https://morenutrition.de/products/more-protein-milkshake?variant=51137617592592"
+        },
+        {
+          "size": "Milkshake Style Cinnalicious / 25g Probe",
+          "url": "https://morenutrition.de/products/more-protein-milkshake?variant=51137622081808"
         }
       ]
     },
@@ -316,6 +364,10 @@
         {
           "size": "Original Taste / 25g Probe",
           "url": "https://morenutrition.de/products/more-protein-iced-chai-latte?variant=51094741483684"
+        },
+        {
+          "size": "Pumpkin Spice Latte / 500g",
+          "url": "https://morenutrition.de/products/more-protein-iced-chai-latte?variant=51137636630800"
         }
       ]
     },
@@ -374,6 +426,18 @@
         {
           "size": "Original Taste / 25g Probe",
           "url": "https://morenutrition.de/products/more-protein-iced-matcha-latte?variant=51094745809060"
+        },
+        {
+          "size": "Strawberry Marshmallow / 500g",
+          "url": "https://morenutrition.de/products/more-protein-iced-matcha-latte?variant=51137621164304"
+        },
+        {
+          "size": "Cherry Mochi (Romi x Emma) / 500g",
+          "url": "https://morenutrition.de/products/more-protein-iced-matcha-latte?variant=51137621262608"
+        },
+        {
+          "size": "Creamy Banana / 500g",
+          "url": "https://morenutrition.de/products/more-protein-iced-matcha-latte?variant=51137612841232"
         }
       ]
     },
@@ -404,6 +468,18 @@
         {
           "size": "White Almond Coconut / 25g Probe",
           "url": "https://morenutrition.de/products/more-protein-milkyccino?variant=51137530822928"
+        },
+        {
+          "size": "Salted Caramel / 500g",
+          "url": "https://morenutrition.de/products/more-protein-milkyccino?variant=51137642201360"
+        },
+        {
+          "size": "Pina Colada / 500g",
+          "url": "https://morenutrition.de/products/more-protein-milkyccino?variant=51137622704400"
+        },
+        {
+          "size": "Chocolate Crispy Cream / 500g",
+          "url": "https://morenutrition.de/products/more-protein-milkyccino?variant=51137649312016"
         }
       ]
     },
@@ -430,6 +506,14 @@
         {
           "size": "Sahne / 50g Probe",
           "url": "https://morenutrition.de/products/more-saucen-back-protein?variant=51094758228132"
+        },
+        {
+          "size": "Koch-Sahne-Style (hitzestabil) / 500g",
+          "url": "https://morenutrition.de/products/more-saucen-back-protein?variant=51137640694032"
+        },
+        {
+          "size": "Schlagcreme / 50g Probe",
+          "url": "https://morenutrition.de/products/more-saucen-back-protein?variant=51137611333904"
         }
       ]
     },
@@ -468,6 +552,18 @@
         {
           "size": "Fine Milk Chocolate / 600g Dose",
           "url": "https://morenutrition.de/products/more-vegan-protein?variant=51094742302884"
+        },
+        {
+          "size": "Banana Bread / 600g Dose",
+          "url": "https://morenutrition.de/products/more-vegan-protein?variant=51137526563088"
+        },
+        {
+          "size": "Cinnalicious / 600g Dose",
+          "url": "https://morenutrition.de/products/more-vegan-protein?variant=51137616675088"
+        },
+        {
+          "size": "Cinnalicious / 25g Probe",
+          "url": "https://morenutrition.de/products/more-vegan-protein?variant=51137622049040"
         }
       ]
     },
@@ -582,6 +678,62 @@
         {
           "size": "Hazelnut Crispy Cream / 25g Probe",
           "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51110281314468"
+        },
+        {
+          "size": "White Almond Coconut / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137622802704"
+        },
+        {
+          "size": "Double Shot of Espresso / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137636663568"
+        },
+        {
+          "size": "Caramel Cold Brew / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137620508944"
+        },
+        {
+          "size": "Moretus Dark Cookie Crumble / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51104394412196"
+        },
+        {
+          "size": "Speculoos / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137642299664"
+        },
+        {
+          "size": "Morezipan White Chocolate / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137642266896"
+        },
+        {
+          "size": "Dark Chocolate Lover / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137648984336"
+        },
+        {
+          "size": "Cafe Frappe Style / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137649049872"
+        },
+        {
+          "size": "Hazelnut Crispy Cream / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137649017104"
+        },
+        {
+          "size": "Crème Brûlée / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51094770385060"
+        },
+        {
+          "size": "Crème Brûlée / 25g Probe",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137612939536"
+        },
+        {
+          "size": "Brownie Marshmallow / 25g Probe",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137615298832"
+        },
+        {
+          "size": "Dark Cookie Crumble / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137621066000"
+        },
+        {
+          "size": "Coffee Lover / 500g",
+          "url": "https://morenutrition.de/products/protein-iced-coffee?variant=51137621623056"
         }
       ]
     },
